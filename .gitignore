@@ -1,0 +1,9 @@
+node_modules/
+.env
+<<<<<<< HEAD
+*.log
+=======
+ticket-touni/
+config.json
+upload-to-github.js
+>>>>>>> HEAD@{1}
