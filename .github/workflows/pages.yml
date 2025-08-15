@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -18,10 +23,9 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs  # إذا ملفات الموقع في مجلد آخر غير docs عدل هذا المسار
+          path: ./docs  # إذا ملفات الموقع في مجلد آخر غير docs، عدّل هذا المسار
 
   deploy:
     needs: build
