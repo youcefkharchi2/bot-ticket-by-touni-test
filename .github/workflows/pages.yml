@@ -25,10 +25,12 @@ jobs:
       - run: npm install
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs  # إذا ملفات الموقع في مجلد آخر غير docs، عدّل هذا المسار
+          path: ./docs  # غيّر هذا إذا ملفاتك في مكان آخر
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/deploy-pages@v4
