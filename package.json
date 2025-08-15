@@ -2,6 +2,9 @@
   "name": "ticket-bot",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build step for this project'"
+  },
   "dependencies": {
     "@octokit/rest": "^22.0.0",
     "axios": "^1.11.0",
